@@ -23,9 +23,9 @@ import java.util.*;
 class FrogJump {
 
     public static boolean canCross(int[] stones) {
-        Map<Integer, List<Integer>> map = new HashMap<>();
+        Map<Integer, Set<Integer>> map = new HashMap<>();
         for (int i = 0; i < stones.length; i++) {
-            map.put(stones[i], new ArrayList<>());
+            map.put(stones[i], new HashSet<>());
         }
         map.get(0).add(1);
 

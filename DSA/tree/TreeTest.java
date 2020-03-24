@@ -23,6 +23,15 @@ class Test {
         System.out.println("Delete 50");
         bst.delete(50);
         printList(bst.inorder());
+
+        Trie trie = new Trie();
+
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));   // returns true
+        System.out.println(trie.search("app"));     // returns false
+        System.out.println(trie.startsWith("app")); // returns true
+        trie.insert("app");   
+        System.out.println(trie.search("app"));     // returns true
     }
 
     public static void printList(List<Integer> lst) {

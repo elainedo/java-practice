@@ -9,7 +9,7 @@ public class MinimumSizeSubarraySum {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        int i = 0, j = 0, sum = 0, min = Integer.MAX_VALUE;
+        int i = 0, j = 0, sum = 0, min = nums.length+1;
         while (j < nums.length) {
             sum += nums[j];
 
@@ -20,9 +20,8 @@ public class MinimumSizeSubarraySum {
             }
             j++;
         }
-        return min;
+        return min == nums.length+1? 0 : min;
     }
-
     public static void main(String[] args) {
         int[] nums = {2,3,1,2,4,3};
         System.out.println(minSubArrayLen(nums, 7));
